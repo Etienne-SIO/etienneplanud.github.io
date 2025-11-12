@@ -1,246 +1,119 @@
-        /* --- Variables et Reset --- */
-        :root {
-            --bg-principal: #ECF0F1; /* Gris clair */
-            --bg-secondaire: #2C3E50; /* Bleu foncé pour la colonne latérale */
-            --couleur-primaire: #3498DB; /* Bleu vif pour l'accent */
-            --couleur-texte-sombre: #34495E;
-            --couleur-texte-clair: #ECF0F1;
-            --couleur-gris-moyen: #95A5A6;
-            --font-principal: 'Montserrat', sans-serif;
-        }
+/* Variables & base (garde ta palette) */
+:root{
+  --bg-principal:#ECF0F1;
+  --bg-secondaire:#2C3E50;
+  --couleur-primaire:#3498DB;
+  --couleur-texte-sombre:#34495E;
+  --couleur-texte-clair:#ECF0F1;
+  --font-principal: 'Montserrat', sans-serif;
+}
 
-        body {
-            font-family: var(--font-principal);
-            line-height: 1.5;
-            margin: 0 auto;
-            padding: 0;
-            background-color: var(--bg-principal);
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            min-height: 100vh;
-        }
+/* Reset minimal */
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+  margin:0;
+  font-family:var(--font-principal);
+  background:var(--bg-principal);
+  color:var(--couleur-texte-sombre);
+}
 
-        .cv-container {
-            display: flex;
-            width: 90%;
-            max-width: 1000px;
-            background-color: white;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-            border-radius: 10px;
-            overflow: hidden; /* Important pour les coins arrondis */
-        }
+/* Skip link */
+.skip-link{
+  position:absolute;
+  left:-999px;
+  top:auto;
+  width:1px;
+  height:1px;
+  overflow:hidden;
+}
+.skip-link:focus{
+  left:10px;
+  top:10px;
+  width:auto;
+  height:auto;
+  padding:8px 12px;
+  background:#000;
+  color:#fff;
+  z-index:1000;
+  border-radius:4px;
+}
 
-        /* --- Colonne Gauche (Profil/Infos) --- */
-        .col-gauche {
-            width: 35%;
-            background-color: var(--bg-secondaire);
-            color: var(--couleur-texte-clair);
-            padding: 40px 30px;
-            box-sizing: border-box;
-            position: relative;
-        }
+/* Container */
+.cv-container{
+  display:flex;
+  max-width:1100px;
+  margin:24px auto;
+  background:#fff;
+  border-radius:10px;
+  overflow:hidden;
+  box-shadow:0 10px 30px rgba(0,0,0,.08);
+}
 
-        .header-gauche {
-            text-align: center;
-            margin-bottom: 40px;
-        }
+/* Colonne gauche (header) */
+.col-gauche{
+  width:34%;
+  background:var(--bg-secondaire);
+  color:var(--couleur-texte-clair);
+  padding:36px 28px;
+}
+.header-gauche{text-align:center}
+.header-gauche h1{
+  font-size:2rem;
+  margin:6px 0 4px;
+  letter-spacing:1px;
+  text-transform:uppercase;
+}
+.subtitle{font-weight:300;margin:0 0 16px}
 
-        .icone-geometrique {
-            font-size: 3.5em;
-            color: var(--couleur-primaire);
-            margin-bottom: 20px;
-        }
+/* Contact */
+.liste-contact{list-style:none;padding:0;margin:12px 0 28px}
+.liste-contact li{display:flex;align-items:center;gap:10px;margin-bottom:10px;font-size:.95rem}
+.liste-contact a{color:var(--couleur-texte-clair);text-decoration:none}
+.liste-contact a:focus,
+.liste-contact a:hover{color:var(--couleur-primaire);text-decoration:underline}
 
-        .header-gauche h1 {
-            font-size: 2.5em;
-            margin: 0;
-            font-weight: 700;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-        }
+/* Compétences */
+.competences h2{font-size:1.05rem;margin:0 0 12px;padding-bottom:6px;border-bottom:1px solid rgba(255,255,255,.12)}
+.skill-item{margin-bottom:14px}
+.barre-progression{height:8px;background:#5D6D7E;border-radius:6px;overflow:hidden}
+.niveau-skill{display:block;height:100%;background:var(--couleur-primaire);width:0;transition:width 900ms cubic-bezier(.2,.8,.2,1)}
 
-        .header-gauche h2 {
-            font-size: 1.1em;
-            margin: 5px 0 0;
-            font-weight: 300;
-        }
+/* Colonne droite */
+.col-droite{width:66%;padding:36px 40px}
+.col-droite h2{font-size:1.1rem;margin:0 0 10px;color:var(--couleur-texte-sombre)}
+.section-bloc{margin-bottom:28px}
+.experience-item{position:relative;padding-left:18px;margin-bottom:18px;border-left:2px solid var(--couleur-primaire)}
+.experience-item::before{
+  content:'';position:absolute;left:-6px;top:0;width:10px;height:10px;background:var(--couleur-primaire);border-radius:50%;border:2px solid #fff;box-shadow:0 0 0 2px var(--couleur-primaire);
+}
+.poste-details{display:flex;justify-content:space-between;color:var(--couleur-gris-moyen);font-style:italic}
 
-        /* Liste de Contact */
-        .liste-contact {
-            list-style: none;
-            padding: 0;
-            margin-bottom: 40px;
-            text-align: center; /* Centrer les icônes de contact */
-        }
+/* Footer */
+.site-footer{padding:16px 20px;background:#fafafa;text-align:center;font-size:.9rem;color:#556}
 
-        .liste-contact li {
-            margin-bottom: 15px;
-            font-size: 0.9em;
-        }
+/* Focus visible (accessibility) */
+a:focus, button:focus {
+  outline:3px dashed rgba(52,152,219,.9);
+  outline-offset:3px;
+  border-radius:4px;
+}
 
-        .liste-contact i {
-            font-size: 1.2em;
-            color: var(--couleur-primaire);
-            width: 30px;
-        }
+/* Hover subtle */
+a:hover{transition:color .2s ease}
 
-        .liste-contact a {
-            color: var(--couleur-texte-clair);
-            text-decoration: none;
-        }
+/* Breakpoints */
+/* Tablette paysage */
+@media (max-width: 1024px){
+  .col-gauche{padding:28px}
+  .col-droite{padding:28px}
+}
 
-        /* Compétences (barres de progression) */
-        .competences h3 {
-            font-size: 1.2em;
-            margin-bottom: 20px;
-            padding-bottom: 5px;
-            border-bottom: 1px solid rgba(255, 255, 255, 0.2);
-            font-weight: 600;
-        }
-
-        .skill-item {
-            margin-bottom: 20px;
-            text-align: left;
-        }
-
-        .skill-item p {
-            margin: 0 0 5px 0;
-            font-size: 0.9em;
-        }
-
-        .barre-progression {
-            height: 8px;
-            background-color: #5D6D7E; /* Gris foncé pour le fond */
-            border-radius: 5px;
-        }
-
-        .niveau-skill {
-            display: block;
-            height: 100%;
-            background-color: var(--couleur-primaire);
-            border-radius: 5px;
-            /* Ces largeurs peuvent être animées via CSS/JS au chargement */
-        }
-        
-        /* Ajustements des niveaux */
-        .skill-figma .niveau-skill { width: 95%; }
-        .skill-uiux .niveau-skill { width: 85%; }
-        .skill-research .niveau-skill { width: 70%; }
-
-
-        /* --- Colonne Droite (Contenu Principal) --- */
-        .col-droite {
-            width: 65%;
-            padding: 40px;
-            box-sizing: border-box;
-            color: var(--couleur-texte-sombre);
-        }
-
-        /* Titres de Section */
-        .col-droite h3 {
-            font-size: 1.4em;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            margin: 0 0 20px;
-            color: var(--couleur-texte-sombre);
-            font-weight: 700;
-        }
-
-        /* Blocs d'Information (prêts à être animés) */
-        .section-bloc {
-            margin-bottom: 35px;
-            padding-bottom: 15px;
-            /* Une légère bordure ou ombre peut simuler des blocs glissants */
-            /* border-bottom: 1px solid var(--couleur-gris-moyen); */
-        }
-        
-        /* Style de la chronologie (timeline) pour l'expérience */
-        .experience-item {
-            position: relative;
-            padding-left: 20px;
-            margin-bottom: 30px;
-            border-left: 2px solid var(--couleur-primaire); /* Ligne de la timeline */
-        }
-        
-        .experience-item::before {
-            content: '';
-            position: absolute;
-            left: -6px; /* Ajuster pour centrer le point sur la ligne */
-            top: 0;
-            width: 10px;
-            height: 10px;
-            background-color: var(--couleur-primaire);
-            border-radius: 50%;
-            border: 2px solid white; /* Pour donner un effet de "point" sur le fond blanc */
-            box-shadow: 0 0 0 2px var(--couleur-primaire); /* Ajoute un halo */
-        }
-
-        .experience-item strong {
-            font-size: 1.1em;
-            display: block;
-            margin-bottom: 2px;
-            color: var(--couleur-texte-sombre);
-            font-weight: 600;
-        }
-
-        .experience-item .poste-details {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            font-size: 0.95em;
-            color: var(--couleur-gris-moyen);
-            margin-bottom: 10px;
-            font-style: italic;
-        }
-        
-        .experience-item ul {
-            padding-left: 20px;
-            margin: 0;
-            font-size: 0.9em;
-            list-style-type: disc;
-        }
-        
-        .experience-item ul li {
-            margin-bottom: 5px;
-        }
-
-
-        /* --- Responsive (pour s'adapter aux petits écrans) --- */
-        @media (max-width: 768px) {
-            .cv-container {
-                flex-direction: column;
-                width: 100%;
-                margin: 0;
-                border-radius: 0;
-            }
-
-            .col-gauche, .col-droite {
-                width: 100%;
-                padding: 30px 20px;
-            }
-            
-            .col-gauche {
-                text-align: center;
-            }
-            
-            .liste-contact {
-                display: flex;
-                flex-wrap: wrap;
-                justify-content: center;
-                gap: 20px;
-            }
-            
-            .liste-contact li {
-                margin: 0;
-            }
-            
-            .competences h3 {
-                text-align: center;
-                border-bottom: 1px solid rgba(255, 255, 255, 0.4);
-            }
-            
-            .skill-item {
-                padding: 0 10%;
-            }
-        }
+/* Mobile */
+@media (max-width:768px){
+  .cv-container{flex-direction:column;border-radius:0}
+  .col-gauche,.col-droite{width:100%;padding:20px}
+  .liste-contact{display:flex;flex-wrap:wrap;gap:14px;justify-content:center}
+  .poste-details{flex-direction:column;gap:4px}
+  .experience-item{padding-left:12px}
+}

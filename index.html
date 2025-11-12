@@ -1,122 +1,127 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CV de Anna Lyse - Chef de projet</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css">
-    <script src="app.js"></script>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Anna Lyse — Cheffe de projet</title>
+  <meta name="description" content="CV de Anna Lyse — Cheffe de projet agile, spécialisée en gestion de projets numériques et UX. Portfolio et contact via GitHub/LinkedIn." />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <!-- Charger uniquement le CSS nécessaire -->
+  <link rel="stylesheet" href="styles.css">
+  <!-- FontAwesome : charger via kit ou sous-ensemble si possible. Ici CDN basique (remplace si tu as un kit) -->
+  <script defer src="https://kit.fontawesome.com/TON_KIT_ID.js" crossorigin="anonymous"></script>
+  <script src="app.js" defer></script>
 </head>
 <body>
 
-<div class="cv-container">
-    
-    <div class="col-gauche">
-        <div class="header-gauche">
-            <div class="icone-geometrique"><i class="fas fa-cube"></i></div>
-            <h1>Anna Lyse</h1>
-            <h2>Cheffe de projet</h2>
-        </div>
+  <!-- Skip link pour l'accessibilité -->
+  <a class="skip-link" href="#main">Aller au contenu principal</a>
 
-        <div class="contact">
-            <ul class="liste-contact">
-                <li><i class="fas fa-phone"></i> +33 7 00 00 00 00</li>
-                <li><i class="fas fa-envelope"></i> anna.lyse@email.com</li>
-                <li><i class="fas fa-map-marker-alt"></i> Montcuq, France</li>
-                <li><i class="fab fa-linkedin"></i> <a href="#" target="_blank">linkedin.com/in/annalyse</a></li>
-            </ul>
-        </div>
+  <div class="cv-container" role="document" aria-label="CV de Anna Lyse">
 
-        <div class="competences">
-            <h3>COMPÉTENCES</h3>
-            
-            <div class="skill-item skill-figma">
-                <p>Programmation</p>
-                <div class="barre-progression"><span class="niveau-skill"></span></div>
-            </div>
-            
-            <div class="skill-item skill-uiux">
-                <p>Design UI/UX</p>
-                <div class="barre-progression"><span class="niveau-skill"></span></div>
-            </div>
-            
-            <div class="skill-item skill-research">
-                <p>Recherche Utilisateur</p>
-                <div class="barre-progression"><span class="niveau-skill"></span></div>
-            </div>
-            
-            <div class="skill-item skill-css">
-                <p>C#/HTML/SQL</p>
-                <div class="barre-progression"><span class="niveau-skill" style="width: 80%;"></span></div>
-            </div>
-        </div>
-        
-    </div>
+    <header class="col-gauche" role="banner">
+      <div class="header-gauche">
+        <div class="icone-geometrique" aria-hidden="true"><i class="fas fa-cube"></i></div>
+        <h1>Anna Lyse</h1>
+        <p class="subtitle">Cheffe de projet — Gestion de projets numériques</p>
+      </div>
 
-    <div class="col-droite">
-        
-        <div class="section-bloc profil">
-            <h3>PROFIL</h3>
-            <p>Forte de mon expertise en gestion de projet agile (Scrum/Kanban) et de ma capacité à réaliser une analyse approfondie des besoins, je traduis la vision stratégique en livrables concrets et performants. Mon objectif est de garantir l'alignement entre les objectifs métier et les solutions techniques, en optimisant les processus de bout en bout. Je suis le point de convergence entre les équipes techniques, le design (UI/UX) et les parties prenantes, assurant une communication fluide et une livraison dans les délais et budgets impartis.</p>
-        </div>
-        
-        <div class="section-bloc experience">
-            <h3>EXPÉRIENCE PROFESSIONNELLE</h3>
-            
-            <div class="experience-item">
-                <strong>Cheffe de projet vidéoprotection</strong>
-                <div class="poste-details">
-                    <span>ENSIO EST - LISSIEU</span>
-                    <span>2023 - PRÉSENT</span>
-                </div>
-                <ul>
-                    <li>Supervision d'une équipe de 5 techniciens sur la region Roannais et Stéphannoise.</li>
-                    <li>Développement et maintien du Design System (Figma).</li>
-                    <li>Réduction de 30% des taux d'abandon lors du processus d'inscription.</li>
-                </ul>
-            </div>
-            
-            <div class="experience-item">
-                <strong>Alternante vidéoprotection</strong>
-                <div class="poste-details">
-                    <span>ENSIO EST - LISSIEU</span>
-                    <span>2018 - 2023</span>
-                </div>
-                <ul>
-                    <li>Création d'un logiciel de supervision du réseaux.</li>
-                    <li>Suivi des projets.</li>
-                    <li>Maintenance du réseaux.</li>
-                </ul>
-            </div>
-            
-        </div>
-        
-        <div class="section-bloc formation">
-            <h3>FORMATION</h3>
-            
-            <div class="experience-item">
-                <strong>Master Informatique</strong>
-                <div class="poste-details">
-                    <span>CFAI - Saint-Etienne</span>
-                    <span>2020 - 2023</span>
-                </div>
-            </div>
-            
-            <div class="experience-item">
-                <strong>BTS SIO option SISR</strong>
-                <div class="poste-details">
-                    <span>CFAI - Saint-Etienne</span>
-                    <span>2018 - 2020</span>
-                </div>
-            </div>
-            
-        </div>
-        
-    </div>
+      <nav aria-label="Coordonnées">
+        <ul class="liste-contact">
+          <li>
+            <i class="fab fa-github" aria-hidden="true"></i>
+            <a href="https://github.com/TON_COMPTE" target="_blank" rel="noopener noreferrer">github.com/TON_COMPTE</a>
+          </li>
+          <li>
+            <i class="fab fa-linkedin" aria-hidden="true"></i>
+            <a href="https://www.linkedin.com/in/TON_PROFIL" target="_blank" rel="noopener noreferrer">linkedin.com/in/TON_PROFIL</a>
+          </li>
+          <li>
+            <i class="fas fa-map-marker-alt" aria-hidden="true"></i>
+            France
+          </li>
+        </ul>
+      </nav>
 
-</div>
+      <section class="competences" aria-label="Compétences">
+        <h2>Compétences</h2>
+        <div class="skill-item skill-figma" aria-hidden="false">
+          <p>Gestion de projet (Scrum / Kanban)</p>
+          <div class="barre-progression" aria-hidden="true"><span class="niveau-skill" data-level="90"></span></div>
+        </div>
+        <div class="skill-item skill-uiux">
+          <p>Design UI/UX & recherche</p>
+          <div class="barre-progression" aria-hidden="true"><span class="niveau-skill" data-level="80"></span></div>
+        </div>
+        <div class="skill-item skill-tech">
+          <p>Tech : C#, HTML, SQL</p>
+          <div class="barre-progression" aria-hidden="true"><span class="niveau-skill" data-level="75"></span></div>
+        </div>
+      </section>
+    </header>
 
+    <main id="main" class="col-droite" role="main">
+      <section id="profil" class="section-bloc" aria-labelledby="profil-title">
+        <h2 id="profil-title">Profil</h2>
+        <p>Cheffe de projet agile spécialisée dans la coordination entre équipes techniques et design. Je conduis la production de livrables stratégiques et opérationnels, avec un focus sur l'alignement métier, la qualité UX et la livraison dans les temps et budgets.</p>
+      </section>
+
+      <section id="experience" class="section-bloc" aria-labelledby="exp-title">
+        <h2 id="exp-title">Expérience professionnelle</h2>
+
+        <article class="experience-item" aria-labelledby="exp1-title">
+          <h3 id="exp1-title">Cheffe de projet vidéoprotection</h3>
+          <div class="poste-details" aria-hidden="true">
+            <span>ENSIO EST — Lissieu</span>
+            <span>2023 – Présent</span>
+          </div>
+          <ul>
+            <li>Supervision d'une équipe de 5 techniciens sur la région Roannais et Stéphannoise.</li>
+            <li>Maintenance et évolution du Design System (Figma).</li>
+            <li>Réduction de 30 % du taux d'abandon du processus d'inscription.</li>
+          </ul>
+        </article>
+
+        <article class="experience-item" aria-labelledby="exp2-title">
+          <h3 id="exp2-title">Alternante vidéoprotection</h3>
+          <div class="poste-details" aria-hidden="true">
+            <span>ENSIO EST — Lissieu</span>
+            <span>2018 – 2023</span>
+          </div>
+          <ul>
+            <li>Création d'un logiciel de supervision réseau (prototype fonctionnel).</li>
+            <li>Suivi de projets et maintenance réseau.</li>
+          </ul>
+        </article>
+      </section>
+
+      <section id="formation" class="section-bloc" aria-labelledby="formation-title">
+        <h2 id="formation-title">Formation</h2>
+        <div class="experience-item">
+          <strong>Master Informatique — CFAI Saint-Étienne</strong>
+          <div class="poste-details" aria-hidden="true"><span>2020 – 2023</span></div>
+        </div>
+        <div class="experience-item">
+          <strong>BTS SIO option SISR — CFAI Saint-Étienne</strong>
+          <div class="poste-details" aria-hidden="true"><span>2018 – 2020</span></div>
+        </div>
+      </section>
+
+      <section id="projets" class="section-bloc" aria-labelledby="projets-title">
+        <h2 id="projets-title">Projets remarquables</h2>
+        <ul>
+          <li><a href="https://github.com/TON_COMPTE/projet-portfolio" target="_blank" rel="noopener noreferrer">Portfolio interactif — HTML/CSS/JS (responsive)</a></li>
+          <li><a href="https://github.com/TON_COMPTE/projet-supervision" target="_blank" rel="noopener noreferrer">Logiciel de supervision réseau — prototype C#</a></li>
+        </ul>
+      </section>
+
+    </main>
+
+    <footer role="contentinfo" class="site-footer">
+      <p>CV — Anna Lyse. Contact via GitHub / LinkedIn.</p>
+    </footer>
+
+  </div>
 </body>
 </html>
